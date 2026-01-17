@@ -34,6 +34,7 @@ body {
         radial-gradient(circle at 8% 92%, var(--brand-color-soft) 0%, transparent 50%),
         radial-gradient(circle at 92% 12%, var(--brand-color-soft) 0%, transparent 50%);
     background-attachment: fixed;
+    overflow-x: hidden;
 }
 
 
