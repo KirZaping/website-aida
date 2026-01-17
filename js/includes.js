@@ -27,13 +27,16 @@ function initMobileMenu() {
 
     burger.addEventListener("click", () => {
         mobileMenu.classList.add("open");
+        document.body.classList.add("menu-open");
         document.body.style.overflow = "hidden";
     });
 
     closeBtn.addEventListener("click", () => {
         mobileMenu.classList.remove("open");
+        document.body.classList.remove("menu-open");
         document.body.style.overflow = "";
     });
+
 
     document.querySelectorAll(".mobile-menu-nav a").forEach(link => {
         link.addEventListener("click", () => {

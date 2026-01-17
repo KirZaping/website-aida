@@ -1,0 +1,23 @@
+/* ── Footer ── */
+footer {
+    text-align: center;
+    padding-block: 6rem 8rem;
+    border-block-start: 1px solid var(--border);
+}
+
+footer p {
+    font-size: 1.05rem;
+    color: var(--text-dim);
+    margin-block-end: 1.4rem;
+}
+
+.footer-links a {
+    color: var(--text-dim);
+    text-decoration: none;
+    margin: 0 1.3rem;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--brand-color);
+}
