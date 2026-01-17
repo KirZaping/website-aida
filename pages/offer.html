@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>AIDA — Offre</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/style/index.css">
+    <link rel="stylesheet" href="/style/header.css">
+    <link rel="stylesheet" href="/style/footer.css">
+</head>
+
+<body>
+
+    <div data-include="header"></div>
+
+    <main>
+        <section class="final-cta">
+            <h1 id="offer-name" class="section-title hero reveal"></h1>
+            <div class="cards">
+                <div class="card reveal">
+                    <h3>Tarif</h3>
+                    <p id="offer-price"></p>
+                </div>
+
+                <div class="card reveal delay-1">
+                    <h3>Inclus</h3>
+                    <ul id="offer-included"></ul>
+                </div>
+
+                <div class="card reveal delay-2">
+                    <h3>Modalités & options</h3>
+                    <ul id="offer-options"></ul>
+                </div>
+            </div>
+
+            <div class="final-cta">
+                <a href="#" data-mail-template="/assets/templates/devis.txt" class="btn-force reveal">
+                    Demander un devis →
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <section class="final-cta offer-purpose">
+        <h2 class="section-title reveal">
+            À quoi sert cette offre ?
+        </h2>
+
+        <p class="final-text reveal delay-1">
+            Cette offre a un objectif simple :
+            t’aider à prendre des décisions plus justes,
+            plus rapides,
+            et plus efficaces.<br><br>
+
+            Elle ne vise pas à produire “plus”.
+            Elle vise à produire mieux :
+            avec une direction claire,
+            des choix assumés,
+            et une exécution cohérente.
+        </p>
+
+        <p class="final-text reveal delay-2">
+            Dans la majorité des cas,
+            les marques que nous accompagnons
+            constatent des effets mesurables
+            après clarification de leur positionnement
+            et recentrage des actions.
+        </p>
+
+        <div class="cards impact-cards">
+            <div class="card impact-card reveal">
+                <span class="impact-value">Jusqu’à +60%</span>
+                <span class="impact-label">de visibilité</span>
+                <p class="impact-desc">
+                    Après clarification du message
+                    et suppression des actions inutiles.
+                </p>
+            </div>
+
+            <div class="card impact-card reveal delay-1">
+                <span class="impact-value">Jusqu’à ×2</span>
+                <span class="impact-label">d’engagement</span>
+                <p class="impact-desc">
+                    Lorsque le discours est cohérent
+                    et assumé sur l’ensemble des canaux.
+                </p>
+            </div>
+
+            <div class="card impact-card reveal delay-2">
+                <span class="impact-value">−30% à −50%</span>
+                <span class="impact-label">d’actions inutiles</span>
+                <p class="impact-desc">
+                    En recentrant les efforts
+                    sur ce qui produit un impact réel.
+                </p>
+            </div>
+        </div>
+
+        <p class="final-text small-note reveal delay-3">
+            * Les performances passées observées chez nos clients
+            ne garantissent pas des performances futures.
+            Les résultats dépendent du contexte,
+            du marché
+            et du niveau d’exécution.
+        </p>
+    </section>
+
+
+    <div data-include="footer"></div>
+
+    <script src="/js/includes.js" defer></script>
+    <script src="/js/offer-page.js" defer></script>
+    <script src="/js/mail-template.js"></script>
+    <script src="/js/main.js" defer></script>
+
+</body>
+
+</html>

@@ -35,12 +35,116 @@ body {
         radial-gradient(circle at 92% 12%, var(--brand-color-soft) 0%, transparent 50%);
     background-attachment: fixed;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
+
+.offer-purpose {
+    padding-block: 12vh 14vh;
+}
+
+.small-note {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    max-width: 820px;
+    margin: 3rem auto 0;
+    opacity: 0.85;
+}
+
+
+/* ── Shooting showcase ───────────────────────── */
+.shooting-showcase {
+    padding: 10rem 5vw 12rem;
+    max-width: 1440px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Grille */
+.shooting-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 4rem;
+    margin-top: 6rem;
+    perspective: 1200px;
+}
+
+/* Carte */
+.shoot-card {
+    position: relative;
+    transform: rotate(-4deg);
+    transition: transform 0.6s var(--ease);
+    cursor: pointer;
+}
+
+.shoot-card:nth-child(2) {
+    transform: rotate(3deg);
+}
+
+.shoot-card:nth-child(3) {
+    transform: rotate(-2deg);
+}
+
+.shoot-card:hover {
+    transform: rotate(0deg) scale(1.03);
+}
+
+/* Image */
+.shoot-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 22px;
+    box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.35);
+}
+
+.shoot-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transform: scale(1.05);
+    transition: transform 0.8s var(--ease);
+}
+
+.shoot-card:hover img {
+    transform: scale(1);
+}
+
+/* Overlay infos */
+.shoot-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(15, 15, 15, 0.0),
+        rgba(15, 15, 15, 0.85)
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.6rem;
+    padding: 2rem;
+    opacity: 0;
+    transition: opacity 0.45s ease;
+}
+
+.shoot-card:hover .shoot-overlay {
+    opacity: 1;
+}
+
+/* Texte overlay */
+.shoot-meta {
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.85);
+}
+
 
 
 /* ── Hero ── */
 main {
-    padding-block-start: 18vh;
+    padding-block-start: 5vh;
     min-block-size: 90vh;
     display: grid;
     place-items: center;
@@ -102,6 +206,11 @@ main {
     padding: 8rem 5vw 10rem;
 }
 
+.cards a {
+    text-decoration: none;
+    color: var(--text);
+}
+
 .card {
     position: relative;
     padding: 3.2rem 3rem 3.6rem;
@@ -151,7 +260,7 @@ main {
     font-weight: 700;
     letter-spacing: -2px;
 
-    color: transparent;
+    color: var(--brand-color-glow);
     background: linear-gradient(180deg,
             var(--accent),
             rgba(0, 0, 0, 0));
@@ -177,6 +286,63 @@ main {
     color: var(--text-dim);
     line-height: 1.65;
     max-width: 440px;
+}
+
+/* ── Founder cards ───────────────────────── */
+.founder-card {
+    position: relative;
+    isolation: isolate;
+}
+
+.founder-photo {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.45s var(--ease);
+    pointer-events: none;
+}
+
+.founder-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.08);
+    transition: transform 0.6s var(--ease);
+}
+
+.founder-photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+            rgba(15, 15, 15, 0.5),
+            rgba(15, 15, 15, 1));
+}
+
+.founder-card h3,
+.founder-card p,
+.founder-card .card-index {
+    position: relative;
+    z-index: 1;
+    transition: color 0.35s ease;
+}
+
+.founder-card:hover .founder-photo {
+    opacity: 1;
+}
+
+.founder-card:hover .founder-photo img {
+    transform: scale(1);
+}
+
+.founder-card:hover h3,
+.founder-card:hover p {
+    color: #ffffff;
+}
+
+.founder-card:hover .card-index {
+    opacity: 0.35;
 }
 
 
@@ -314,9 +480,14 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
+
 .impact-card {
     text-align: left;
     padding: 2.8rem 2.6rem 3rem;
+}
+
+.impact-card:hover {
+    transform: translateY(-14px);
 }
 
 /* Chiffre principal */

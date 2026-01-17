@@ -1,0 +1,99 @@
+{
+    "audit-essentiel": {
+        "id": "audit-essentiel",
+        "name": "Audit essentiel",
+        "category": "Consulting",
+        "price": "600 €",
+        "included": [
+            "Analyse de la situation actuelle",
+            "Évaluation du positionnement",
+            "Analyse de l’image et de la cohérence globale",
+            "Identification des points de friction visibles"
+        ],
+        "outcome": "Tu sais où tu en es.",
+        "options": []
+    },
+    "audit-avance": {
+        "id": "audit-avance",
+        "name": "Audit avancé",
+        "category": "Consulting",
+        "price": "1 200 €",
+        "included": [
+            "Analyse complète de la situation actuelle",
+            "Identification des erreurs stratégiques",
+            "Détection des incohérences opérationnelles",
+            "Liste de quick wins exploitables immédiatement"
+        ],
+        "outcome": "Tu sais quoi corriger vite.",
+        "options": []
+    },
+    "audit-consulting": {
+        "id": "audit-consulting",
+        "name": "Audit & consulting",
+        "category": "Consulting",
+        "price": "2 500 €",
+        "included": [
+            "Audit avancé complet",
+            "Construction d’une stratégie globale",
+            "Définition d’objectifs clairs et mesurables",
+            "Feuille de route priorisée et actionnable"
+        ],
+        "outcome": "Tu sais quoi faire et pourquoi.",
+        "options": []
+    },
+    "photoshooting": {
+        "id": "photoshooting",
+        "name": "Photoshooting",
+        "category": "Création",
+        "price": "250 € / demi-journée",
+        "included": [
+            "Demi-journée de shooting",
+            "10 photos retouchées premium",
+            "Toutes les photos brutes livrées",
+            "Licence d’utilisation incluse (print, web, ads)"
+        ],
+        "outcome": "Tu peux publier, sponsoriser, imprimer. Sans limite.",
+        "options": [
+            "Photo retouchée supplémentaire : +15 € / unité"
+        ]
+    },
+    "community-essentielle": {
+        "id": "community-essentielle",
+        "name": "Gestion essentielle",
+        "category": "Community management",
+        "price": "225 € / mois",
+        "included": [
+            "Présence régulière et cohérente",
+            "Ligne éditoriale claire",
+            "Publications maîtrisées"
+        ],
+        "outcome": "Pour exister sans se diluer.",
+        "options": []
+    },
+    "community-strategique": {
+        "id": "community-strategique",
+        "name": "Gestion stratégique",
+        "category": "Community management",
+        "price": "350 € / mois",
+        "included": [
+            "Contenus pensés pour engager",
+            "Positionnement affirmé",
+            "Adaptation continue au terrain"
+        ],
+        "outcome": "Pour commencer à peser.",
+        "options": []
+    },
+    "community-offensive": {
+        "id": "community-offensive",
+        "name": "Gestion offensive",
+        "category": "Community management",
+        "price": "900 € / mois",
+        "included": [
+            "Création de récits forts",
+            "Prises de position assumées",
+            "Accélération de la visibilité"
+        ],
+        "outcome": "Pour prendre la place.",
+        "options": []
+    }
+}
