@@ -11,6 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet" />
+    <link rel="preload" href="assets/videos/hero-video.mp4" as="video" type="video/mp4" />
     <link rel="stylesheet" href="style/index.css">
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/footer.css">
@@ -20,15 +21,27 @@
     <div data-include="header"></div>
 
     <!-- HERO -->
-    <main>
-        <div class="final-cta">
-            <h2 class="section-title hero reveal">Marketing<br>qui s'excuse pas<br>d'exister</h2>
-            <p class="hero-subtitle reveal delay-1">
+    <main class="hero-main">
+        <div class="final-cta hero-video-cta">
+            <div class="hero-video-media">
+                <video class="hero-video-frame" autoplay muted loop playsinline webkit-playsinline preload="auto"
+                    disablepictureinpicture aria-hidden="true" tabindex="-1">
+                    <source src="assets/videos/hero-video.mp4" type="video/mp4" />
+                </video>
+                <div class="hero-video-overlay"></div>
+                <div class="hero-video-fade"></div>
+            </div>
+            <div class="hero-video-content">
+                <h2 class="section-title hero reveal hero-video-title">
+                    Marketing<br>qui s'excuse pas<br>d'exister
+                </h2>
+            <p class="hero-subtitle reveal delay-1 hero-video-subtitle">
                 On ne fait pas du contenu.<br />
                 On fait des marques qui squattent la tête des gens.
             </p>
             <a href="#" data-mail-template="/assets/templates/travailler-avec-vous.txt"
                 class="btn-force reveal delay-2">On attaque →</a>
+            </div>
         </div>
     </main>
 
