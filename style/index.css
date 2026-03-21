@@ -313,6 +313,14 @@ main {
     --hero-image: url("../assets/images/service-community-management.jpg");
 }
 
+.hero-image-cta-photoshooting {
+    --hero-image: url("../assets/images/service-photoshooting.jpg");
+}
+
+.hero-image-cta-audit {
+    --hero-image: url("../assets/images/service-audit-consulting.jpg");
+}
+
 .hero-title {
     font-family: "Space Grotesk", sans-serif;
     font-size: clamp(4.4rem, 10vw, 12rem);
@@ -515,11 +523,11 @@ main {
 }
 
 .service-card-photoshooting {
-    --service-card-image: url("../assets/images/service-photoshooting.jpg");
+    --service-card-image: url("../assets/images/service-photoshooting-portrary.jpg");
 }
 
 .service-card-audit {
-    --service-card-image: url("../assets/images/service-audit-consulting.jpg");
+    --service-card-image: url("../assets/images/service-audit-consulting-portrary.jpg");
 }
 
 /* ── Founder cards ───────────────────────── */
