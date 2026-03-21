@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>AIDA — Offre</title>
+    <title>AIDA - Offre</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="/style/index.css">
@@ -15,101 +15,136 @@
 
     <div data-include="header"></div>
 
-    <main>
-        <section class="final-cta">
-            <h1 id="offer-name" class="section-title hero reveal"></h1>
-            <div class="cards">
-                <div class="card reveal">
-                    <h3>Tarif</h3>
-                    <p id="offer-price"></p>
-                </div>
-
-                <div class="card reveal delay-1">
-                    <h3>Inclus</h3>
-                    <ul id="offer-included"></ul>
-                </div>
-
-                <div class="card reveal delay-2">
-                    <h3>Modalités & options</h3>
-                    <ul id="offer-options"></ul>
+    <!-- HERO PRODUIT : visuel de l'offre + bloc de decision -->
+    <main class="offer-product-main">
+        <!-- Vue principale type fiche produit -->
+        <section class="offer-product">
+            <!-- Media principal de l'offre -->
+            <div class="offer-product-media reveal">
+                <div class="offer-product-image-shell">
+                    <img id="offer-image" class="offer-product-image" src="" alt="" />
                 </div>
             </div>
 
-            <div class="final-cta">
-                <a href="#" data-mail-template="/assets/templates/devis.txt" class="btn-force reveal">
-                    Demander un devis →
-                </a>
+            <!-- Informations commerciales principales -->
+            <div class="offer-product-info reveal delay-1">
+                <span id="offer-category" class="offer-product-kicker"></span>
+                <h1 id="offer-name" class="offer-product-title"></h1>
+                <p id="offer-description" class="offer-product-description"></p>
+
+                <!-- Bloc achat : prix, promesse, CTA, format -->
+                <div class="offer-product-purchase card no-hover">
+                    <div class="offer-product-price-row">
+                        <div>
+                            <p id="offer-price-label" class="offer-product-price-label">Tarif</p>
+                            <p id="offer-price" class="offer-product-price"></p>
+                        </div>
+                        <span id="offer-badge" class="offer-product-badge">Sur devis rapide</span>
+                    </div>
+
+                    <p id="offer-purchase-detail" class="offer-product-purchase-detail"></p>
+                    <p id="offer-outcome" class="offer-product-outcome"></p>
+
+                    <a id="offer-cta" href="mailto:aidanetcom@gmail.com" data-mail-template="/assets/templates/devis.txt"
+                        class="btn-force offer-product-cta">
+                        Demander un devis ->
+                    </a>
+
+                    <div class="offer-product-meta">
+                        <div class="offer-meta-item">
+                            <span id="offer-format-label" class="offer-meta-label">Format</span>
+                            <span id="offer-format" class="offer-meta-value"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detail de l'offre affiche juste sous le bloc achat -->
+                <div class="offer-product-section offer-product-included card reveal">
+                    <div class="offer-product-section-head">
+                        <p id="offer-included-kicker" class="offer-section-kicker">Details de l'offre</p>
+                        <h2 id="offer-included-title">Ce qui est inclus</h2>
+                        <p id="offer-included-intro" class="offer-section-intro"></p>
+                    </div>
+                    <ul id="offer-included" class="offer-product-list"></ul>
+                </div>
+
+                <div class="offer-product-section offer-product-options card reveal delay-1" id="offer-options-section">
+                    <h2 id="offer-options-title">Modalites & options</h2>
+                    <ul id="offer-options" class="offer-product-list offer-product-list-muted"></ul>
+                </div>
             </div>
         </section>
     </main>
 
+    <!-- Section de reassurance / utilite de l'offre -->
     <section class="final-cta offer-purpose">
         <h2 class="section-title reveal">
-            À quoi sert cette offre ?
+            A quoi sert cette offre ?
         </h2>
 
         <p class="final-text reveal delay-1">
             Cette offre a un objectif simple :
-            t’aider à prendre des décisions plus justes,
+            t'aider a prendre des decisions plus justes,
             plus rapides,
             et plus efficaces.<br><br>
 
-            Elle ne vise pas à produire “plus”.
-            Elle vise à produire mieux :
+            Elle ne vise pas a produire "plus".
+            Elle vise a produire mieux :
             avec une direction claire,
-            des choix assumés,
-            et une exécution cohérente.
+            des choix assumes,
+            et une execution coherente.
         </p>
 
         <p class="final-text reveal delay-2">
-            Dans la majorité des cas,
+            Dans la majorite des cas,
             les marques que nous accompagnons
             constatent des effets mesurables
-            après clarification de leur positionnement
+            apres clarification de leur positionnement
             et recentrage des actions.
         </p>
 
         <div class="cards impact-cards">
             <div class="card impact-card reveal">
-                <span class="impact-value">Jusqu’à +60%</span>
-                <span class="impact-label">de visibilité</span>
+                <span class="impact-value">Jusqu'a +60%</span>
+                <span class="impact-label">de visibilite</span>
                 <p class="impact-desc">
-                    Après clarification du message
+                    Apres clarification du message
                     et suppression des actions inutiles.
                 </p>
             </div>
 
             <div class="card impact-card reveal delay-1">
-                <span class="impact-value">Jusqu’à ×2</span>
-                <span class="impact-label">d’engagement</span>
+                <span class="impact-value">Jusqu'a x2</span>
+                <span class="impact-label">d'engagement</span>
                 <p class="impact-desc">
-                    Lorsque le discours est cohérent
-                    et assumé sur l’ensemble des canaux.
+                    Lorsque le discours est coherent
+                    et assume sur l'ensemble des canaux.
                 </p>
             </div>
 
             <div class="card impact-card reveal delay-2">
-                <span class="impact-value">−30% à −50%</span>
-                <span class="impact-label">d’actions inutiles</span>
+                <span class="impact-value">-30% a -50%</span>
+                <span class="impact-label">d'actions inutiles</span>
                 <p class="impact-desc">
                     En recentrant les efforts
-                    sur ce qui produit un impact réel.
+                    sur ce qui produit un impact reel.
                 </p>
             </div>
         </div>
 
         <p class="final-text small-note reveal delay-3">
-            * Les performances passées observées chez nos clients
+            * Les performances passees observees chez nos clients
             ne garantissent pas des performances futures.
-            Les résultats dépendent du contexte,
-            du marché
-            et du niveau d’exécution.
+            Les resultats dependent du contexte,
+            du marche
+            et du niveau d'execution.
         </p>
     </section>
 
-
+    <!-- Footer injecte dynamiquement -->
     <div data-include="footer"></div>
 
+    <!-- Scripts partages + chargement dynamique de l'offre -->
     <script src="/js/includes.js" defer></script>
     <script src="/js/offer-page.js" defer></script>
     <script src="/js/mail-template.js"></script>
