@@ -12,6 +12,34 @@ const observer = new IntersectionObserver(
 
 document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 
+const impactSections = document.querySelectorAll(".impact-cards");
+
+function updateImpactParallax() {
+    impactSections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        const shift = window.innerHeight * 0.5 - rect.top;
+        section.style.setProperty("--impact-shift", `${shift}px`);
+    });
+}
+
+let impactTicking = false;
+
+function requestImpactParallaxUpdate() {
+    if (impactTicking) return;
+
+    impactTicking = true;
+    window.requestAnimationFrame(() => {
+        updateImpactParallax();
+        impactTicking = false;
+    });
+}
+
+if (impactSections.length > 0) {
+    updateImpactParallax();
+    window.addEventListener("scroll", requestImpactParallaxUpdate, { passive: true });
+    window.addEventListener("resize", requestImpactParallaxUpdate);
+}
+
 // -------- menu
 
 document.addEventListener("DOMContentLoaded", () => {

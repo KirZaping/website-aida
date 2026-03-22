@@ -814,7 +814,8 @@ main {
 
 .service-card h3,
 .service-card p,
-.service-card .card-index {
+.service-card .card-index,
+.service-card .service-card-cta {
     position: relative;
     z-index: 1;
 }
@@ -829,6 +830,35 @@ main {
     color: rgba(255, 255, 255, 0.88);
     max-width: 40ch;
     text-shadow: 0 6px 24px rgba(0, 0, 0, 0.28);
+}
+
+.service-card-cta {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 1.4rem;
+    width: fit-content;
+    padding: 0.78rem 1.1rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: #ffffff;
+    font-size: 0.96rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-shadow: none;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition:
+        background 0.28s ease,
+        border-color 0.28s ease,
+        transform 0.28s var(--ease);
+}
+
+.services-grid a:hover .service-card-cta,
+.services-grid a:focus-visible .service-card-cta {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.34);
+    transform: translateY(-2px);
 }
 
 .service-card .card-index {
@@ -1049,7 +1079,38 @@ main {
 
 /* ── Impact cards ───────────────────────── */
 .impact-cards {
+    position: relative;
+    isolation: isolate;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.impact-cards::before,
+.impact-cards::after {
+    content: "";
+    position: absolute;
+    border-radius: 999px;
+    filter: blur(24px);
+    pointer-events: none;
+    z-index: -1;
+    will-change: transform;
+}
+
+.impact-cards::before {
+    top: -2rem;
+    left: -3rem;
+    width: 18rem;
+    height: 18rem;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.14) 0%, rgba(37, 99, 235, 0) 72%);
+    transform: translate3d(0, calc(var(--impact-shift, 0px) * 0.08), 0);
+}
+
+.impact-cards::after {
+    right: -2rem;
+    bottom: -3rem;
+    width: 16rem;
+    height: 16rem;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, rgba(59, 130, 246, 0) 72%);
+    transform: translate3d(0, calc(var(--impact-shift, 0px) * -0.06), 0);
 }
 
 
