@@ -37,6 +37,43 @@ async function loadOffer() {
     image.src = offer.image;
     image.alt = `${offer.name} - visuel de l'offre`;
 
+    const gallery = document.getElementById("offer-gallery");
+    const galleryTrack = document.getElementById("offer-gallery-track");
+    galleryTrack.innerHTML = "";
+
+    if (offer.extend_picture && offer.extend_picture.length > 0) {
+        gallery.hidden = false;
+        offer.extend_picture.forEach((src, index) => {
+            const item = document.createElement("button");
+            item.type = "button";
+            item.className = "offer-gallery-item";
+            item.setAttribute("aria-label", `Voir l'image ${index + 1} de l'offre`);
+
+            const thumb = document.createElement("img");
+            thumb.src = src;
+            thumb.alt = `${offer.name} - vue ${index + 1}`;
+            thumb.className = "offer-gallery-image";
+
+            item.appendChild(thumb);
+            item.addEventListener("click", () => {
+                image.src = src;
+                image.alt = `${offer.name} - vue ${index + 1}`;
+                galleryTrack
+                    .querySelectorAll(".offer-gallery-item")
+                    .forEach((node) => node.classList.remove("is-active"));
+                item.classList.add("is-active");
+            });
+
+            if (index === 0) {
+                item.classList.add("is-active");
+            }
+
+            galleryTrack.appendChild(item);
+        });
+    } else {
+        gallery.hidden = true;
+    }
+
     const cta = document.getElementById("offer-cta");
     cta.textContent = offer.cta_label;
     cta.href = "mailto:aidanetcom@gmail.com";
