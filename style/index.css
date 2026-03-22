@@ -1122,8 +1122,26 @@ main {
         padding-block-start: 24vh;
     }
 
+    .offer-product-main {
+        padding: 7rem 4vw 3rem;
+    }
+
     .offer-product {
         grid-template-columns: 1fr;
+        gap: 1.75rem;
+    }
+
+    .offer-product-media,
+    .offer-product-info {
+        min-width: 0;
+    }
+
+    .offer-product-image-shell {
+        aspect-ratio: 16 / 11;
+    }
+
+    .offer-gallery-track {
+        grid-auto-columns: minmax(180px, 240px);
     }
 
     .section-title {
@@ -1144,6 +1162,110 @@ main {
 @media (max-width: 580px) {
     :root {
         --hero-video-scale: 1.32;
+    }
+
+    .offer-product-main {
+        padding: 6.5rem 1rem 2.5rem;
+    }
+
+    .offer-product {
+        gap: 1.25rem;
+    }
+
+    .offer-product-media {
+        padding: 0;
+    }
+
+    .offer-product-image-shell {
+        border-radius: 22px;
+        aspect-ratio: 4 / 4.5;
+    }
+
+    .offer-gallery-track {
+        grid-auto-columns: minmax(150px, 62vw);
+        gap: 0.75rem;
+    }
+
+    .offer-gallery-item {
+        border-radius: 16px;
+    }
+
+    .offer-product-info {
+        gap: 1rem;
+    }
+
+    .offer-product-kicker,
+    .offer-section-kicker {
+        font-size: 0.72rem;
+        letter-spacing: 0.07em;
+    }
+
+    .offer-product-title {
+        font-size: clamp(2.2rem, 10vw, 3rem);
+        line-height: 0.98;
+        margin-bottom: 0.9rem;
+    }
+
+    .offer-product-description {
+        font-size: 0.98rem;
+        line-height: 1.6;
+        margin-bottom: 0;
+    }
+
+    .offer-product-purchase {
+        padding: 1.25rem;
+    }
+
+    .offer-product-price {
+        font-size: clamp(2rem, 9vw, 2.8rem);
+    }
+
+    .offer-product-badge {
+        font-size: 0.72rem;
+        padding: 0.5rem 0.7rem;
+    }
+
+    .offer-product-purchase-detail,
+    .offer-product-outcome,
+    .offer-section-intro {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .offer-product-cta {
+        min-height: 3.25rem;
+        margin-bottom: 0.85rem;
+    }
+
+    .offer-product-section {
+        padding: 1.25rem;
+    }
+
+    .offer-product-section-head {
+        margin-bottom: 1.1rem;
+    }
+
+    .offer-product-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .offer-product-list {
+        gap: 0.75rem;
+    }
+
+    .offer-product-list li {
+        padding: 0.9rem 0.9rem 0.9rem 2.85rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        border-radius: 16px;
+    }
+
+    .offer-product-list li::before {
+        top: 1.05rem;
+        left: 1rem;
+        width: 0.6rem;
+        height: 0.6rem;
+        box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.09);
     }
 
     .hero-video-cta .hero-video-content {
@@ -1256,6 +1378,19 @@ main {
         --hero-video-scale: 1.38;
     }
 
+    .offer-product-main {
+        padding-inline: 0.75rem;
+    }
+
+    .offer-product-image-shell {
+        border-radius: 18px;
+        aspect-ratio: 4 / 4.8;
+    }
+
+    .offer-gallery-track {
+        grid-auto-columns: minmax(136px, 68vw);
+    }
+
     .final-cta.hero-video-cta {
         padding-inline: 1.25rem;
     }
@@ -1294,7 +1429,7 @@ main {
     }
 
     .offer-product-title {
-        font-size: clamp(2.55rem, 12vw, 3.6rem);
+        font-size: clamp(2rem, 11vw, 2.7rem);
     }
 
     .offer-product-meta {
@@ -1311,7 +1446,7 @@ main {
 
     .offer-product-purchase,
     .offer-product-section {
-        padding: 1.25rem;
+        padding: 1rem;
     }
 
     .cards {
